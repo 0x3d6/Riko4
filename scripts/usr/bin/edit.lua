@@ -28,13 +28,13 @@ local editorTheme = {
   caret = 9       -- orange
 }
 local syntaxTheme = {
-  keyword = 13,        -- purple
+  keyword = 10,        -- yellow
   specialKeyword = 12, -- light blue
   func = 12,           -- light blue
   string = 8,          -- red
-  stringEscape = 10,   -- yellow
+  stringEscape = 14,   -- pink
   primitive = 9,       -- orange
-  comment = 6,         -- dark gray
+  comment = 11,        -- light green
   catch = 16           -- everything else is white
 }
 
