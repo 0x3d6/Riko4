@@ -804,6 +804,16 @@ return function(context)
       highlighter.insertLine(cursorLine + 1, editorContent[cursorLine + 1])
       updateCursor(localIndent, cursorLine + 1)
       checkDrawBounds()
+    elseif key == "d" and modifiers.key.ctrl then
+      local dup
+      if selection.active then
+        -- would be better to do after some abstraction elsewhere
+      else
+        dup = editorContent[cursorLine]
+        tableInsert(editorContent, cursorLine + 1, editorContent[cursorLine])
+        highlighter.insertLine(cursorLine + 1, editorContent[cursorLine + 1])
+      end
+      checkDrawBounds()
     elseif key == "tab" then
       if selection.active then
         checkSelectionOrder()
